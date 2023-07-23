@@ -16,3 +16,11 @@ ip dhcp pool __.com
  Int Fa 0/5
  swi acc vlan __
  do sh ip dhcp binding
+
+
+
+
+
+homework
+45 - dns s1
+100 - dns s2
