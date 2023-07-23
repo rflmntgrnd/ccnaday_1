@@ -1,0 +1,18 @@
+SubnetDesigImplemenationTemplate:
+conf t
+vlan __
+ name __.com
+ exit
+Int vlan __
+ no shut
+ ip add 10.0._._  255.255._._
+ip dhcp excluded-add 10.0._._ 10.0._._
+ip dhcp pool __.com
+ network 10.0._._ 255.255._._
+ default-router 10.0._._
+ domain-name _.com
+ dns-server 10._._._
+ option 150 ip 10._._._
+ Int Fa 0/5
+ swi acc vlan __
+ do sh ip dhcp binding
