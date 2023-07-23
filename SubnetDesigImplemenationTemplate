@@ -21,6 +21,43 @@ ip dhcp pool __.com
 
 
 
+
+
 homework
 45 - dns s1
 100 - dns s2
+
+
+
+HOW TO CONFIGURE IPV6 N CISCO
+METHOD 1 IP6 AUTOCONFIG
+METHOD 2: EUI-64: Extended  Unique Identifier (EUI)
+
+DSA/S1:
+ipv6 unicast-routing
+int vlan 25
+ ipv6 address baca:baca:1111:2222::/64 eui-64
+ ipv6 address autoconfig
+end
+
+s1:
+DSA/S1:
+ipv6 unicast-routing
+int e1/0
+ ipv6 address baca:baca:1111:2222::/64 eui-64
+ ipv6 address autoconfig
+end
+
+@D1
+config t
+ipv6 unicast-routing
+int vlan 25
+ ipv6 address face:face:cafe:fafa:caca::a/64
+
+@s1
+                                                                            
+config t
+ipv6 unicast-routing
+ipv6 address face:face:cafe:fafa:caca::f/64
+int e1/0
+ ipv6 address autoconfig
