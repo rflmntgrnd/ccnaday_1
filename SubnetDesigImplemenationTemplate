@@ -61,3 +61,18 @@ ipv6 unicast-routing
 ipv6 address face:face:cafe:fafa:caca::f/64
 int e1/0
  ipv6 address autoconfig
+
+
+TASK8: 
+Most important dns record
+ns:
+www:
+smtp:
+imap:
+pop:
+mx
+
+
+HOMEROOM
+Day 5 -it rivan
+P1-P5
